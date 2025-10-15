@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度之星・程序设计大赛参赛指南</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1890ff;
+            --primary-dark: #096dd9;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --border: #e5e7eb;
+            --accent: #f3f4f6;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --blue: #3b82f6;
+            --purple: #8b5cf6;
+            --green: #059669;
+            --orange: #f97316;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            border-radius: 12px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--accent);
+            color: var(--text);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            transition: all 0.2s;
+        }
+        
+        .back-btn:hover {
+            background: var(--border);
+            transform: translateY(-1px);
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border);
+        }
+        
+        .section h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        .section h3 {
+            color: var(--text);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 24px 0 16px 0;
+        }
+        
+        .section h4 {
+            color: var(--text);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 20px 0 12px 0;
+        }
+        
+        .track-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .track-card {
+            padding: 20px;
+            background: var(--accent);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .track-card h4 {
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+        
+        .track-card.blue { border-left-color: var(--blue); }
+        .track-card.blue h4 { color: var(--blue); }
+        
+        .track-card.green { border-left-color: var(--green); }
+        .track-card.green h4 { color: var(--green); }
+        
+        .track-card.orange { border-left-color: var(--orange); }
+        .track-card.orange h4 { color: var(--orange); }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 1px solid #f59e0b;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .highlight-box h4 {
+            color: #92400e;
+            margin-bottom: 12px;
+        }
+        
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .requirement-card {
+            padding: 20px;
+            background: var(--accent);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .requirement-card h4 {
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: var(--accent);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--accent);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -23px;
+            top: 25px;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+        
+        .timeline-date {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        
+        .timeline-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .school-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        
+        .school-card {
+            padding: 16px;
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+            border-radius: 8px;
+        }
+        
+        .school-card h4 {
+            color: #0369a1;
+            margin-bottom: 8px;
+        }
+        
+        .school-card.success { background: #f0fdf4; border-color: #22c55e; }
+        .school-card.success h4 { color: #15803d; }
+        
+        .school-card.warning { background: #fffbeb; border-color: #f59e0b; }
+        .school-card.warning h4 { color: #d97706; }
+        
+        .group-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+        
+        .group-card {
+            padding: 12px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .group-card h4 {
+            color: var(--primary);
+            margin-bottom: 4px;
+            font-size: 0.9rem;
+        }
+        
+        ul, ol {
+            margin: 12px 0;
+            padding-left: 24px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--primary);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-right: 8px;
+        }
+        
+        .badge.success { background: var(--success); }
+        .badge.warning { background: var(--warning); }
+        .badge.danger { background: var(--danger); }
+        .badge.blue { background: var(--blue); }
+        .badge.purple { background: var(--purple); }
+        .badge.green { background: var(--green); }
+        .badge.orange { background: var(--orange); }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .track-grid,
+            .requirements-grid,
+            .school-grid,
+            .group-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← 返回首页</a>
+        
+        <div class="header">
+            <h1>百度之星・程序设计大赛</h1>
+            <p class="subtitle">（2024-2025）参赛指南</p>
+        </div>
+
+        <div class="section">
+            <h2>一、赛事基础信息</h2>
+            
+            <h3>🎯 赛事定位</h3>
+            <p>由百度公司主办，始于2005年，已举办20+届，累计参赛超30万人次，覆盖上千所高校，被誉为国内程序员的"黄埔军校"和"造星工厂"，入选教育部"全国普通高校大学生竞赛排行榜"，核心考察选手算法设计、编程实践与问题解决能力。</p>
+            
+            <h3>📱 官方渠道</h3>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h4>竞赛官网</h4>
+                    <p>star.baidu.com（赛事动态、规则查询）</p>
+                </div>
+                <div class="requirement-card">
+                    <h4>报名&比赛平台</h4>
+                    <p>码蹄集（matiji.net/astar，第三方OJ平台，含往届赛题：matiji.net/baiduzhixing）</p>
+                </div>
+                <div class="requirement-card">
+                    <h4>咨询方式</h4>
+                    <ul>
+                        <li>QQ：253274581</li>
+                        <li>电话：17801063020（工作时间10:00-18:00）</li>
+                        <li>邮箱：xiaomage@matiji.net（报名缴费咨询）</li>
+                        <li>监督投诉邮箱：astar@baidu.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>👥 官方交流群</h3>
+            <div class="group-grid">
+                <div class="group-card">
+                    <h4>高中组</h4>
+                    <p>780165060</p>
+                </div>
+                <div class="group-card">
+                    <h4>小星星组</h4>
+                    <p>825064597</p>
+                </div>
+                <div class="group-card">
+                    <h4>大学组1群</h4>
+                    <p>676849226</p>
+                </div>
+                <div class="group-card">
+                    <h4>大学组2群</h4>
+                    <p>778344848</p>
+                </div>
+                <div class="group-card">
+                    <h4>大学组3群</h4>
+                    <p>774140886</p>
+                </div>
+                <div class="group-card">
+                    <h4>大学组4群</h4>
+                    <p>671660716</p>
+                </div>
+            </div>
+            <p>按身份分组，每人限入1群，非在校生入大学群，入群备注"姓名+学校/单位"</p>
+        </div>
+
+        <div class="section">
+            <h2>二、参赛对象与组队要求</h2>
+            
+            <h3>👥 参赛资格</h3>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h4>初赛</h4>
+                    <ul>
+                        <li>无国籍、年龄、身份限制</li>
+                        <li>在校生（小学至博士）</li>
+                        <li>非在校生/社会人士均可参与</li>
+                    </ul>
+                </div>
+                <div class="requirement-card">
+                    <h4>总决赛</h4>
+                    <ul>
+                        <li>仅限具有正式全日制学籍的在校生</li>
+                        <li>以初赛报名时学籍状态为准，含应届毕业生</li>
+                        <li>非在校生/社会人士可申请"打星"名额</li>
+                        <li>需获省赛铜奖及以上，发邮件至astar@baidu.com申请</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>👥 组队规则</h3>
+            <ul>
+                <li>单人参赛，不支持团队组队</li>
+                <li>百度内部接触赛题/数据的人员禁赛</li>
+                <li>其他在职员工/实习生可参与排名但不领奖项</li>
+            </ul>
+            
+            <h3>📊 身份分组</h3>
+            <p>报名时需按实际身份勾选：</p>
+            <ul>
+                <li><span class="badge">小星星组</span>小学/初中</li>
+                <li><span class="badge success">高中组</span>高中/中专</li>
+                <li><span class="badge blue">大学组</span>大专/本科/硕士/博士</li>
+                <li><span class="badge warning">非在校生组</span>社会人士</li>
+            </ul>
+            <p>应届毕业生可勾选毕业时学生身份</p>
+        </div>
+
+        <div class="section">
+            <h2>三、赛制与赛程安排</h2>
+            
+            <h3>🏆 核心赛段（2024-2025年参考）</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>赛段</th>
+                            <th>时间（参考）</th>
+                            <th>形式</th>
+                            <th>赛题与时长</th>
+                            <th>晋级规则</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>初赛（省赛）</strong></td>
+                            <td>2024年：3场（6月2日/16日/30日）<br>2025年：2场（6月29日/8月10日，14:00-17:00）</td>
+                            <td>线上</td>
+                            <td>6-8题/2-3小时（算法设计）</td>
+                            <td>1. 常规通道：单场前1000名（2025年单场前400名）晋级复赛<br>2. 绿色通道：单场初中及以下选手前100名<br>3. 外卡通道：组委会额外给予约100个"复活"名额</td>
+                        </tr>
+                        <tr>
+                            <td><strong>复赛</strong></td>
+                            <td>未明确（通常在初赛结束后1-2个月）</td>
+                            <td>线上</td>
+                            <td>6-8题/2-3小时（算法设计）</td>
+                            <td>1. 常规通道：前80名在校生晋级总决赛<br>2. 绿色通道：前20名初中及以下在校生晋级</td>
+                        </tr>
+                        <tr>
+                            <td><strong>总决赛</strong></td>
+                            <td>2024-2025年：秋季（线下）</td>
+                            <td>线下（百度指定地点）</td>
+                            <td>1道百度业务相关工程算法题/6-8小时（编程马拉松）</td>
+                            <td>按解题结果与耗时排名，仅在校生参与正式排名</td>
+                        </tr>
+                        <tr>
+                            <td><strong>测试赛</strong></td>
+                            <td>各赛段前</td>
+                            <td>线上</td>
+                            <td>往届赛题</td>
+                            <td>不计排名，仅用于熟悉平台、找回账号</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3>⏰ 关键时间节点注意</h3>
+            <div class="highlight-box">
+                <h4>重要提醒</h4>
+                <ul>
+                    <li><strong>报名截止：</strong>每场初赛前2小时停止报名（2025年需在赛前2天完成校内登记+平台报名）</li>
+                    <li><strong>场次更换：</strong>每人仅限更换1次初赛场次，需提前1周发邮件至xiaomage@matiji.net</li>
+                    <li><strong>资格确认：</strong>决赛需赛前完成资格确认（时间另行通知）</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>四、报名流程与费用</h2>
+            
+            <h3>📝 报名步骤</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-title">1. 平台注册</div>
+                    <p>登录码蹄集报名页（matiji.net/astar或2025年指定页：matiji.net/exam/contest/astar?id=13），未注册者先完成注册（海外选手需用国内手机号验证）</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-title">2. 信息填写</div>
+                    <ul>
+                        <li><strong>学校名称：</strong>手动输入全称，禁填简称</li>
+                        <li><strong>所在省份：</strong>勾选院校本部/校区所在省（国外选手选"海外赛区/oversea"）</li>
+                        <li><strong>指导老师：</strong>必填姓名、电话、邮箱（无则填"无"）</li>
+                        <li><strong>信息锁定：</strong>比赛开始后不可修改，学籍状态以初赛报名时为准</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-title">3. 校内对接</div>
+                    <p>部分高校需先完成校内登记（如江西水利电力大学需加QQ群144822088登记，哈尔滨工业大学（威海）需按院校通知操作），再进行平台报名</p>
+                </div>
+            </div>
+            
+            <h3>💰 费用与缴费</h3>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h4>收费标准</h4>
+                    <ul>
+                        <li>无报名费</li>
+                        <li>第三方平台收取考试服务费80元/人/单场</li>
+                        <li>初赛、决赛同价</li>
+                    </ul>
+                </div>
+                <div class="requirement-card">
+                    <h4>缴费方式</h4>
+                    <ul>
+                        <li><strong>团体缴费：</strong>学校统一对公转账，缴费后联系QQ253274581获取"参赛邀请码"</li>
+                        <li><strong>个人缴费：</strong>提交报名信息后在线扫码支付（支持微信、信用卡）</li>
+                    </ul>
+                </div>
+                <div class="requirement-card">
+                    <h4>退费与发票</h4>
+                    <ul>
+                        <li><strong>退费：</strong>缴费后1周内可申请，1个月内处理</li>
+                        <li><strong>发票：</strong>团体缴费可联系QQ253274581申请，开出后不退不换</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>五、赛题与技术要求</h2>
+            
+            <h3>🎯 考察方向</h3>
+            <div class="track-grid">
+                <div class="track-card">
+                    <h4>基础算法</h4>
+                    <ul>
+                        <li>动态规划</li>
+                        <li>图论</li>
+                        <li>字符串处理</li>
+                    </ul>
+                </div>
+                <div class="track-card blue">
+                    <h4>程序设计能力</h4>
+                    <p>编程实践与问题解决能力</p>
+                </div>
+                <div class="track-card green">
+                    <h4>工程化算法</h4>
+                    <ul>
+                        <li>大数据处理</li>
+                        <li>AI应用</li>
+                        <li>百度业务相关</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>💻 技术要求</h3>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h4>支持语言</h4>
+                    <p>C、C++、Python、Java</p>
+                </div>
+                <div class="requirement-card">
+                    <h4>评判规则</h4>
+                    <p>按"解题正确率（AC数）+耗时（罚时）"排名，提交后系统自动判定结果</p>
+                </div>
+                <div class="requirement-card">
+                    <h4>往届参考</h4>
+                    <p>可查看《百度之星题集2005-2021年》（清华大学出版社）或码蹄集平台往届赛题</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>六、奖项设置</h2>
+            
+            <h3>🏆 初赛（省赛）奖项</h3>
+            <div class="track-grid">
+                <div class="track-card">
+                    <h4>等级奖</h4>
+                    <ul>
+                        <li>每场按实际参赛人数约5%（金）、10%（银）、15%（铜）设奖</li>
+                        <li>总计30%，AC数为0者不得奖</li>
+                        <li>不分省份、不分组别，按绝对成绩排名</li>
+                    </ul>
+                </div>
+                <div class="track-card blue">
+                    <h4>其他奖项</h4>
+                    <ul>
+                        <li>初赛获奖选手指导教师自动获"省赛优秀教练"电子证书</li>
+                        <li>社会人士可参与初赛评奖，但不晋级决赛</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>🥇 总决赛奖项</h3>
+            <div class="track-grid">
+                <div class="track-card green">
+                    <h4>等级奖</h4>
+                    <ul>
+                        <li>按大学组、高中组、小星星组分别设奖</li>
+                        <li>每组约10%金、20%银、30%铜，总计60%</li>
+                        <li>同一选手不可兼得多组别奖项</li>
+                    </ul>
+                </div>
+                <div class="track-card orange">
+                    <h4>特殊奖</h4>
+                    <ul>
+                        <li>成绩排名第一者获"总冠军"荣誉</li>
+                        <li>"打星"选手成绩优异者获荣誉激励</li>
+                    </ul>
+                </div>
+                <div class="track-card">
+                    <h4>附加福利</h4>
+                    <ul>
+                        <li>决赛获奖选手可获百度校园招聘/实习生招聘绿色通道</li>
+                        <li>指导教师自动获"优秀教练"证书</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>🏢 组织奖项</h3>
+            <p>对组织参赛突出的院校、指导教师，颁发"优秀组织单位""优秀教练"等荣誉，优先推荐参与百度产学合作协同育人项目。</p>
+        </div>
+
+        <div class="section">
+            <h2>七、关键注意事项</h2>
+            
+            <h3>🔒 诚信要求</h3>
+            <ul>
+                <li>需独立答题，禁止作弊/欺诈</li>
+                <li>违者取消成绩、列入不诚信数据库，禁赛3年（部分院校规定）</li>
+            </ul>
+            
+            <h3>📱 信息同步</h3>
+            <ul>
+                <li>报名截止前平台易拥堵，建议提前3-5天提交</li>
+                <li>赛事调整（时间、赛制）通过官网/公众号发布，需定期关注</li>
+            </ul>
+            
+            <h3>💰 费用报销</h3>
+            <ul>
+                <li>部分高校为参赛学生统一代缴初赛费用（如江西水利电力大学）</li>
+                <li>决赛前40名在校生可报销差旅，具体需咨询校内负责人</li>
+            </ul>
+            
+            <h3>🎯 志愿者申请</h3>
+            <div class="highlight-box">
+                <h4>志愿者机会</h4>
+                <p>参与百度之星官方微博活动的活跃用户，有机会成为总决赛志愿者，获现场观摩资格。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>软件学院 | 竞赛指南</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<h1>软件学院竞赛指南</h1>
+			<div class="header-actions">
+				<label class="search">
+					<span class="icon">🔎</span>
+					<input id="search" type="search" placeholder="搜索赛事 / 关键词…">
+				</label>
+				<button id="themeToggle" class="btn" aria-label="切换主题">🌙</button>
+			</div>
+		</div>
+	</header>
+
+	<main class="container">
+		<section class="hero">
+			<h2>面向软件学院学生的权威赛事指南</h2>
+			<p>快速了解报名时间、赛道设置、参赛要求与备赛要点。一键直达原文档。</p>
+		</section>
+
+		<section id="cards" class="cards">
+			<!-- 春季赛事 (3-5月) -->
+			<div class="timeline-section">
+				<h3 class="timeline-title">🌸 春季赛事 (3-5月)</h3>
+				<div class="timeline-cards">
+					<article class="card" data-keywords="蓝桥杯 软件 编程 嵌入式 电子设计 视觉设计">
+						<div class="card-badge">蓝桥杯</div>
+						<h3>"蓝桥杯"全国软件和信息技术专业人才大赛</h3>
+						<p class="card-desc">覆盖编程、嵌入式、电子设计、视觉设计等赛项，强调以赛促学、以赛促用。</p>
+						<ul class="meta">
+							<li>阶段：报名（10-12 月）→省赛（4 月）→国赛（5-6 月）</li>
+							<li>资源：官网题库、真题、模拟考试与培训</li>
+						</ul>
+						<div class="card-actions">
+							<a class="btn primary" href="蓝桥杯.html" target="_blank" rel="noopener">查看原文</a>
+						</div>
+					</article>
+
+					<article class="card" data-keywords="中国软件杯 软件设计 应用开发 软件工程 系统开发 编程">
+						<div class="card-badge">软件杯</div>
+						<h3>中国软件杯大学生软件设计大赛</h3>
+						<p class="card-desc">国家级软件设计与应用开发赛事，聚焦产教融合、培育软件人才，普通赛道+专项赛道双轨并行。</p>
+						<ul class="meta">
+							<li>赛道：普通赛道（A组/B组）、专项赛道（智赋百业）</li>
+							<li>特色：国家级赛事、产教融合、企业技术框架、国产化技术</li>
+						</ul>
+						<div class="card-actions">
+							<a class="btn primary" href="中国软件杯.html" target="_blank" rel="noopener">查看原文</a>
+						</div>
+					</article>
+				</div>
+			</div>
+
+			<!-- 夏季赛事 (6-8月) -->
+			<div class="timeline-section">
+				<h3 class="timeline-title">☀️ 夏季赛事 (6-8月)</h3>
+				<div class="timeline-cards">
+					<article class="card" data-keywords="三创 电子商务 创新 创意 创业">
+						<div class="card-badge">三创赛</div>
+						<h3>全国大学生电子商务"创新、创意及创业"挑战赛</h3>
+						<p class="card-desc">聚焦电商前沿与实际应用，设置常规赛与实战赛两大板块，强调创新性、可行性与落地转化。</p>
+						<ul class="meta">
+							<li>覆盖：三农电商、跨境电商、直播电商、智慧物流</li>
+							<li>流程：报名→校赛→省赛→国赛（7-8 月）</li>
+						</ul>
+						<div class="card-actions">
+							<a class="btn primary" href="三创.html" target="_blank" rel="noopener">查看原文</a>
+						</div>
+					</article>
+
+					<article class="card" data-keywords="互联网+ 双创 创新创业 高教主赛道 青年红色筑梦之旅">
+						<div class="card-badge">互联网+</div>
+						<h3>中国国际"互联网+"大学生创新创业大赛</h3>
+						<p class="card-desc">覆盖面最广的高校双创赛事，强调创新性、可行性、社会与商业价值，多赛道分组。</p>
+						<ul class="meta">
+							<li>阶段：校级初赛（4-6 月）→省级复赛（7-8 月）→总决赛（9-10 月）</li>
+							<li>赛道：高教主赛道、青年红色筑梦之旅、职教、产业命题、萌芽</li>
+						</ul>
+						<div class="card-actions">
+							<a class="btn primary" href="互联网+.html" target="_blank" rel="noopener">查看原文</a>
+						</div>
+					</article>
+
+					<article class="card" data-keywords="移动应用 iOS iPadOS visionOS Swift 启明 启迪 启航 苹果">
+						<div class="card-badge">移动应用</div>
+						<h3>中国高校计算机大赛 - 移动应用创新赛</h3>
+						<p class="card-desc">聚焦iOS/iPadOS/visionOS系统移动应用开发，三大赛道覆盖创意、创新、创业全流程，苹果公司技术支持。</p>
+						<ul class="meta">
+							<li>赛道：启明（创意）、启迪（创新）、启航（创业）</li>
+							<li>特色：iOS生态、Swift语言、苹果技术支持、App Store上架</li>
+						</ul>
+						<div class="card-actions">
+							<a class="btn primary" href="移动应用.html" target="_blank" rel="noopener">查看原文</a>
+						</div>
+					</article>
+				</div>
+			</div>
+
+			<!-- 秋季赛事 (9-11月) -->
+			<div class="timeline-section">
+				<h3 class="timeline-title">🍂 秋季赛事 (9-11月)</h3>
+				<div class="timeline-cards">
+					<article class="card" data-keywords="挑战杯 学术 科技 小挑 省赛 国赛">
+						<div class="card-badge">挑战杯</div>
+						<h3>"挑战杯"全国大学生课外学术科技作品竞赛（小挑）</h3>
+						<p class="card-desc">两年一届的高校科技创新标志性赛事，突出学术性、创新性与应用价值，重视论文与作品质量。</p>
+						<ul class="meta">
+							<li>阶段：高校内部→省级竞赛→全国总决赛</li>
+							<li>重点：科研规范、数据充分、现场展示与答辩</li>
+						</ul>
+						<div class="card-actions">
+							<a class="btn primary" href="挑战杯.html" target="_blank" rel="noopener">查看原文</a>
+						</div>
+					</article>
+
+					<article class="card" data-keywords="人工智能 AI 算法 机器学习 深度学习 计算机视觉 自然语言处理">
+						<div class="card-badge">AI算法</div>
+						<h3>全球校园人工智能算法精英大赛</h3>
+						<p class="card-desc">覆盖全球1000多所高校，聚焦人工智能算法人才培养与竞技，六大赛道覆盖AI算法全场景。</p>
+						<ul class="meta">
+							<li>赛道：算法挑战、创新、应用、主题、产业命题、专项</li>
+							<li>特色：全球赛事、多赛道、产业对接、算法巅峰赛</li>
+						</ul>
+						<div class="card-actions">
+							<a class="btn primary" href="人工智能算法.html" target="_blank" rel="noopener">查看原文</a>
+						</div>
+					</article>
+
+					<article class="card" data-keywords="iCAN 创新创业 物联网 智能制造 人工智能 创新赛道 创业赛道 挑战赛道">
+						<div class="card-badge">iCAN</div>
+						<h3>第十九届iCAN大学生创新创业大赛</h3>
+						<p class="card-desc">聚焦物联网、智能制造、人工智能等领域的公益性创新创业赛事，以"自信、坚持、梦想"为精神，培养青年创新人才。</p>
+						<ul class="meta">
+							<li>赛道：创新赛道、创业赛道、挑战赛道</li>
+							<li>特色：10大应用领域、国际赛推荐、产学研融合</li>
+						</ul>
+						<div class="card-actions">
+							<a class="btn primary" href="iCAN.html" target="_blank" rel="noopener">查看原文</a>
+						</div>
+					</article>
+				</div>
+			</div>
+
+			<!-- 全年赛事 -->
+			<div class="timeline-section">
+				<h3 class="timeline-title">📅 全年赛事</h3>
+				<div class="timeline-cards">
+					<article class="card" data-keywords="网络技术 C4 挑战赛 创意 攻关 网络安全 车联网">
+						<div class="card-badge">网络技术</div>
+						<h3>中国高校计算机大赛 - 网络技术挑战赛</h3>
+						<p class="card-desc">C4网络技术挑战赛，分为创意（A）系列和攻关（B）系列，聚焦网络技术创新与应用。</p>
+						<ul class="meta">
+							<li>阶段：报名→资格赛→选拔赛→挑战赛</li>
+							<li>特色：企业定制题目、跨校组队、多赛道并行</li>
+						</ul>
+						<div class="card-actions">
+							<a class="btn primary" href="网络技术挑战赛.html" target="_blank" rel="noopener">查看原文</a>
+						</div>
+					</article>
+
+					<article class="card" data-keywords="华为 ICT 实践赛 创新赛 编程赛 挑战赛 仓颉 昇腾">
+						<div class="card-badge">华为ICT</div>
+						<h3>第十届华为ICT大赛</h3>
+						<p class="card-desc">华为面向全球大学生打造的年度ICT赛事，以"联接、荣耀、未来"为主题，聚焦ICT人才培养。</p>
+						<ul class="meta">
+							<li>赛道：实践赛、创新赛、编程赛、挑战赛</li>
+							<li>特色：华为技术生态、全球总决赛、企业级应用</li>
+						</ul>
+						<div class="card-actions">
+							<a class="btn primary" href="华为ICT.html" target="_blank" rel="noopener">查看原文</a>
+						</div>
+					</article>
+
+					<article class="card" data-keywords="节能减排 绿色能源 双碳 社会实践 科技作品 东北石油大学">
+						<div class="card-badge">节能减排</div>
+						<h3>第十八届全国大学生节能减排社会实践与科技竞赛</h3>
+						<p class="card-desc">紧密围绕"双碳"战略目标，聚焦节能减排技术创新与社会实践，入选全国普通高校大学生竞赛相关榜单。</p>
+						<ul class="meta">
+							<li>类型：科技作品类、社会实践类</li>
+							<li>特色：实物演示、调研报告、绿色能源创新</li>
+						</ul>
+						<div class="card-actions">
+							<a class="btn primary" href="节能减排.html" target="_blank" rel="noopener">查看原文</a>
+						</div>
+					</article>
+
+					<article class="card" data-keywords="百度之星 程序设计 算法 编程 码蹄集 初赛 复赛 总决赛">
+						<div class="card-badge">百度之星</div>
+						<h3>百度之星・程序设计大赛</h3>
+						<p class="card-desc">被誉为国内程序员的"黄埔军校"和"造星工厂"，核心考察算法设计、编程实践与问题解决能力。</p>
+						<ul class="meta">
+							<li>赛制：初赛→复赛→总决赛（编程马拉松）</li>
+							<li>特色：单人参赛、多身份分组、百度招聘绿色通道</li>
+						</ul>
+						<div class="card-actions">
+							<a class="btn primary" href="百度之星.html" target="_blank" rel="noopener">查看原文</a>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer container">
+		<p>© <span id="year"></span> 比赛先知 · 为你的下一次夺冠做好准备</p>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+</html>
