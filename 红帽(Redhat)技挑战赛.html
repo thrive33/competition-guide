@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红帽（Red Hat）技术挑战赛参赛指南</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #dc2626; /* red */
+            --primary-dark: #b91c1c;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --border: #e5e7eb;
+            --accent: #f3f4f6;
+            --warning: #f59e0b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--accent); color: var(--text); text-decoration: none; border-radius: 8px; font-weight: 500; margin-bottom: 30px; transition: all .2s; }
+        .back-btn:hover { background: var(--border); transform: translateY(-1px); }
+
+        .header { text-align: center; margin-bottom: 40px; padding: 40px 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: #fff; border-radius: 12px; }
+        .header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; }
+        .header .subtitle { font-size: 1.2rem; opacity: .9; }
+
+        .section { margin-bottom: 40px; background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px -1px rgba(0,0,0,.1); border: 1px solid var(--border); }
+        .section h2 { color: var(--primary); font-size: 1.8rem; font-weight: 600; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid var(--primary); }
+        .section h3 { color: var(--text); font-size: 1.2rem; font-weight: 600; margin: 16px 0 10px; }
+
+        ul, ol { margin: 12px 0; padding-left: 24px; }
+        li { margin: 8px 0; }
+
+        .requirements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 12px 0; }
+        .requirement-card { padding: 16px; background: var(--accent); border-radius: 8px; border-left: 4px solid var(--primary); }
+        .requirement-card h4 { color: var(--primary); margin-bottom: 8px; }
+
+        .track-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 12px 0; }
+        .track-card { padding: 16px; background: var(--accent); border-radius: 8px; border-left: 4px solid var(--primary); }
+        .track-card h4 { color: var(--primary); margin-bottom: 8px; }
+
+        .highlight-box { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 1px solid var(--warning); border-radius: 8px; padding: 16px; margin: 16px 0; }
+        .highlight-box h4 { color: #92400e; margin-bottom: 8px; }
+
+        .timeline { position: relative; padding-left: 30px; }
+        .timeline::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 2px; background: var(--primary); }
+        .timeline-item { position: relative; margin-bottom: 16px; padding: 16px; background: var(--accent); border-radius: 8px; border-left: 4px solid var(--primary); }
+        .timeline-item::before { content: ''; position: absolute; left: -23px; top: 22px; width: 12px; height: 12px; background: var(--primary); border-radius: 50%; border: 3px solid #fff; }
+        .timeline-title { font-weight: 600; margin-bottom: 6px; }
+
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            .header h1 { font-size: 2rem; }
+            .section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← 返回首页</a>
+
+        <div class="header">
+            <h1>红帽（Red Hat）技术挑战赛</h1>
+            <p class="subtitle">参赛指南（以当届官方通知为准）</p>
+        </div>
+
+        <div class="section">
+            <h2>一、赛事简介</h2>
+            <p>红帽技术挑战赛聚焦企业级 Linux 与自动化运维实战能力，通常包含初赛、复赛、全国总决赛等阶段，覆盖 RHCSA/RHCE 等认证体系相关知识与实操技能。</p>
+        </div>
+
+        <div class="section">
+            <h2>二、参赛对象与限制（以地方赛公告为准）</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h4>参赛对象</h4>
+                    <ul>
+                        <li>年满 18 周岁的在校大学生</li>
+                        <li>面向对红帽技术有兴趣的同学（以各地公告为准）</li>
+                    </ul>
+                </div>
+                <div class="requirement-card">
+                    <h4>限制说明</h4>
+                    <ul>
+                        <li>曾进入往届全国总决赛的学生通常不可报名</li>
+                        <li>各地可能有额外限制，以当地院校合作伙伴公告为准</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>三、报名方式（示例）</h2>
+            <ul>
+                <li>通过红帽授权的院校合作伙伴报名；或按高校通知加入指定报名渠道（如 QQ 群等）</li>
+                <li>示例：某届山西赛区报名 QQ 群 605320727（仅示例，以当届为准）</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>四、赛程与内容（示例）</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-title">初赛（在线）</div>
+                    <ul>
+                        <li>题型：单选、多选</li>
+                        <li>范围：Red Hat Enterprise Linux 8 基础知识</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">区域复赛（在线）</div>
+                    <ul>
+                        <li>题型：简答/综合题</li>
+                        <li>范围：基于 RHEL 9 的 Ansible 自动化运维</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">全国总决赛（线上实操）</div>
+                    <ul>
+                        <li>组织：红帽中国培训部</li>
+                        <li>内容：偏向 RHCE 实操能力</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h4>知识点参考</h4>
+                <ul>
+                    <li>RHCSA：<a href="https://www.redhat.com/zh/services/training/rh124-red-hat-system-administration-i" target="_blank" rel="noopener">RH124</a>、<a href="https://www.redhat.com/zh/services/training/rh135-red-hat-system-administration-ii-rhcsa-exam" target="_blank" rel="noopener">RH135</a></li>
+                    <li>RHCE：<a href="https://www.redhat.com/zh/services/training/rh294-red-hat-system-administration-iii-linux-automation" target="_blank" rel="noopener">RH294</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>五、奖项设置（示例）</h2>
+            <ul>
+                <li>区域赛奖项：由院校合作伙伴自定</li>
+                <li>全国总决赛：一等奖 1 名、二等奖 2 名、三等奖 3 名、其余优秀奖</li>
+                <li>冠军：红帽奖品、证书、奖杯 + 一次红帽官方认证课程免费学习考试机会</li>
+                <li>亚军/季军：红帽奖品、证书、奖杯；优秀奖：红帽奖品、证书</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>六、备赛建议</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h4>Linux 基础</h4>
+                    <ul>
+                        <li>用户与权限、软件包管理、系统服务、网络配置</li>
+                        <li>shell 与脚本编写、常见日志与故障排查</li>
+                    </ul>
+                </div>
+                <div class="requirement-card">
+                    <h4>Ansible 自动化</h4>
+                    <ul>
+                        <li>Inventory、Playbook、Roles、模块使用与编排</li>
+                        <li>CI/CD 与基础设施即代码（IaC）理念</li>
+                    </ul>
+                </div>
+                <div class="requirement-card">
+                    <h4>实验环境</h4>
+                    <ul>
+                        <li>建议基于 RHEL 8/9 或兼容发行版进行实验</li>
+                        <li>准备虚拟化或云主机环境，便于反复练习</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

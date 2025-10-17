@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全国高校计算机能力挑战赛参赛指南</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0ea5e9; /* sky */
+            --primary-dark: #0284c7;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --border: #e5e7eb;
+            --accent: #f3f4f6;
+            --warning: #f59e0b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--accent); color: var(--text); text-decoration: none; border-radius: 8px; font-weight: 500; margin-bottom: 30px; transition: all .2s; }
+        .back-btn:hover { background: var(--border); transform: translateY(-1px); }
+
+        .header { text-align: center; margin-bottom: 40px; padding: 40px 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: #fff; border-radius: 12px; }
+        .header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; }
+        .header .subtitle { font-size: 1.2rem; opacity: .9; }
+
+        .section { margin-bottom: 40px; background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px -1px rgba(0,0,0,.1); border: 1px solid var(--border); }
+        .section h2 { color: var(--primary); font-size: 1.8rem; font-weight: 600; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid var(--primary); }
+        .section h3 { color: var(--text); font-size: 1.2rem; font-weight: 600; margin: 16px 0 10px; }
+
+        ul, ol { margin: 12px 0; padding-left: 24px; }
+        li { margin: 8px 0; }
+
+        .requirements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 12px 0; }
+        .requirement-card { padding: 16px; background: var(--accent); border-radius: 8px; border-left: 4px solid var(--primary); }
+        .requirement-card h4 { color: var(--primary); margin-bottom: 8px; }
+
+        .track-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 12px 0; }
+        .track-card { padding: 16px; background: var(--accent); border-radius: 8px; border-left: 4px solid var(--primary); }
+        .track-card h4 { color: var(--primary); margin-bottom: 8px; }
+
+        .timeline { position: relative; padding-left: 30px; }
+        .timeline::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 2px; background: var(--primary); }
+        .timeline-item { position: relative; margin-bottom: 16px; padding: 16px; background: var(--accent); border-radius: 8px; border-left: 4px solid var(--primary); }
+        .timeline-item::before { content: ''; position: absolute; left: -23px; top: 22px; width: 12px; height: 12px; background: var(--primary); border-radius: 50%; border: 3px solid #fff; }
+        .timeline-title { font-weight: 600; margin-bottom: 6px; }
+
+        .highlight-box { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 1px solid var(--warning); border-radius: 8px; padding: 16px; margin: 16px 0; }
+        .highlight-box h4 { color: #92400e; margin-bottom: 8px; }
+
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            .header h1 { font-size: 2rem; }
+            .section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← 返回首页</a>
+
+        <div class="header">
+            <h1>全国高校计算机能力挑战赛</h1>
+            <p class="subtitle">参赛指南（2025 第七届）</p>
+        </div>
+
+        <div class="section">
+            <h2>一、赛事概览</h2>
+            <p>由全国高等学校计算机教育研究会主办，分设大数据挑战赛、人工智能挑战赛、Office 高级应用赛、程序设计挑战赛、数字媒体创新设计赛五大赛项。</p>
+        </div>
+
+        <div class="section">
+            <h2>二、参赛对象与组别</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h4>参赛对象</h4>
+                    <ul>
+                        <li>高校所有专业在校生</li>
+                    </ul>
+                </div>
+                <div class="requirement-card">
+                    <h4>组别设置</h4>
+                    <ul>
+                        <li>本研组（本科、研究生）</li>
+                        <li>高职组（高职、高专）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>三、报名方式与时间</h2>
+            <ul>
+                <li>官网报名：<a href="http://www.ncccu.org.cn" target="_blank" rel="noopener">http://www.ncccu.org.cn</a>（QQ 识别登录）</li>
+                <li>个人赛：本人登录选择科目并缴费</li>
+                <li>团队赛：队长登录报名，随后在个人中心填写队员信息</li>
+                <li>报名时间：2025/10/15 00:00 — 2025/11/30 23:59</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>四、竞赛形式</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h4>个人赛</h4>
+                    <ul>
+                        <li>实时通关型：赛前仅公布范围，开赛公布任务</li>
+                        <li>按任务完成度得分，可设 1 名指导老师</li>
+                    </ul>
+                </div>
+                <div class="requirement-card">
+                    <h4>团队赛</h4>
+                    <ul>
+                        <li>作品提交型：指定时间公布任务，截止前提交</li>
+                        <li>1-3 名不同学校学生可组队，可设 1 名指导老师</li>
+                        <li>最终分数基于评委打分/答辩/现场赛</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>五、赛制安排</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-title">区域赛</div>
+                    <p>可与省赛合并举办；未办省赛地区可直接报区域赛；承办单位可组织现场赛或在线智慧监考上机赛</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">国赛</div>
+                    <p>各区域一、二等奖获奖选手晋级</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>六、竞赛科目</h2>
+            <div class="track-grid">
+                <div class="track-card"><h4>Office 高级应用赛</h4></div>
+                <div class="track-card"><h4>程序设计挑战赛</h4></div>
+                <div class="track-card"><h4>大数据挑战赛</h4></div>
+                <div class="track-card"><h4>人工智能挑战赛</h4></div>
+                <div class="track-card"><h4>数字媒体创新设计赛</h4></div>
+            </div>
+            <p>各科目的考察内容与要求请登录官网查看。</p>
+        </div>
+
+        <div class="section">
+            <h2>七、奖项设置</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h4>区域赛</h4>
+                    <ul>
+                        <li>一等奖 10%</li>
+                        <li>二等奖 20%</li>
+                        <li>三等奖 25%</li>
+                        <li>颁发电子荣誉证书与电子指导老师证书</li>
+                    </ul>
+                </div>
+                <div class="requirement-card">
+                    <h4>国赛</h4>
+                    <ul>
+                        <li>一等奖 ≤ 参赛数 10%</li>
+                        <li>二等奖 ≤ 参赛数 20%</li>
+                        <li>三等奖 ≤ 参赛数 30%</li>
+                        <li>颁发电子荣誉证书与电子指导老师证书</li>
+                        <li>各赛项成绩前三名团队设大赛奖金</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>八、费用说明</h2>
+            <ul>
+                <li>区域赛：团队赛各科目 180 元/队；个人赛各科目 60 元/科</li>
+                <li>国赛：决赛不再另行收费</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+

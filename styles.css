@@ -45,13 +45,15 @@ body{
 @media(min-width:640px){.timeline-cards{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:980px){.timeline-cards{grid-template-columns:repeat(3,1fr)}}
 
-.card{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.00));border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:0 8px 30px rgba(0,0,0,.25)}
-.card-badge{position:absolute;top:12px;right:12px;background:rgba(59,130,246,.15);color:#8bb7ff;border:1px solid var(--ring);padding:4px 8px;border-radius:999px;font-size:12px}
+.card{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.00));border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:0 8px 30px rgba(0,0,0,.25);display:flex;flex-direction:column}
+.card::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:140px;height:140px;background-image:url('badge.png');background-size:contain;background-repeat:no-repeat;opacity:.22;pointer-events:none}
+.card-badge{position:static;align-self:flex-start;background:rgba(59,130,246,.15);color:#8bb7ff;border:1px solid var(--ring);padding:4px 8px;border-radius:999px;font-size:12px;pointer-events:none;margin-bottom:8px;display:inline-flex;align-items:center;gap:6px}
+.card-badge::before{content:"";display:none}
 .card h3{margin:6px 0 10px 0;font-size:18px}
 .card-desc{margin:0 0 12px 0;color:var(--muted);line-height:1.6}
 .meta{margin:0 0 14px 0;padding-left:18px;color:var(--muted)}
 .meta li{margin:6px 0}
-.card-actions{display:flex;gap:10px}
+.card-actions{display:flex;gap:10px;margin-top:auto}
 
 .site-footer{padding:28px 0 40px;border-top:1px solid var(--border);color:var(--muted);text-align:center}
 

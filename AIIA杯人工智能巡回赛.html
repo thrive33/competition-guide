@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIIA 杯人工智能巡回赛参赛指南</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb; /* blue */
+            --primary-dark: #1d4ed8;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --border: #e5e7eb;
+            --accent: #f3f4f6;
+            --warning: #f59e0b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--accent); color: var(--text); text-decoration: none; border-radius: 8px; font-weight: 500; margin-bottom: 30px; transition: all .2s; }
+        .back-btn:hover { background: var(--border); transform: translateY(-1px); }
+
+        .header { text-align: center; margin-bottom: 40px; padding: 40px 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: #fff; border-radius: 12px; }
+        .header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; }
+        .header .subtitle { font-size: 1.2rem; opacity: .9; }
+
+        .section { margin-bottom: 40px; background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px -1px rgba(0,0,0,.1); border: 1px solid var(--border); }
+        .section h2 { color: var(--primary); font-size: 1.8rem; font-weight: 600; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid var(--primary); }
+        .section h3 { color: var(--text); font-size: 1.2rem; font-weight: 600; margin: 16px 0 10px; }
+
+        ul, ol { margin: 12px 0; padding-left: 24px; }
+        li { margin: 8px 0; }
+
+        .requirements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 12px 0; }
+        .requirement-card { padding: 16px; background: var(--accent); border-radius: 8px; border-left: 4px solid var(--primary); }
+        .requirement-card h4 { color: var(--primary); margin-bottom: 8px; }
+
+        .track-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 12px 0; }
+        .track-card { padding: 16px; background: var(--accent); border-radius: 8px; border-left: 4px solid var(--primary); }
+        .track-card h4 { color: var(--primary); margin-bottom: 8px; }
+
+        .timeline { position: relative; padding-left: 30px; }
+        .timeline::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 2px; background: var(--primary); }
+        .timeline-item { position: relative; margin-bottom: 16px; padding: 16px; background: var(--accent); border-radius: 8px; border-left: 4px solid var(--primary); }
+        .timeline-item::before { content: ''; position: absolute; left: -23px; top: 22px; width: 12px; height: 12px; background: var(--primary); border-radius: 50%; border: 3px solid #fff; }
+        .timeline-title { font-weight: 600; margin-bottom: 6px; }
+
+        .highlight-box { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 1px solid var(--warning); border-radius: 8px; padding: 16px; margin: 16px 0; }
+        .highlight-box h4 { color: #92400e; margin-bottom: 8px; }
+
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            .header h1 { font-size: 2rem; }
+            .section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← 返回首页</a>
+
+        <div class="header">
+            <h1>AIIA 杯人工智能巡回赛</h1>
+            <p class="subtitle">参赛指南（各赛点规则以当届公告为准）</p>
+        </div>
+
+        <div class="section">
+            <h2>一、赛事简介</h2>
+            <p>AIIA 杯人工智能巡回赛由中国人工智能产业发展联盟（AIIA）主办，采用系列巡回赛的方式，由 AIIA 成员单位自愿申请主办各赛点，每个赛点的具体规则和奖励由主办单位决定。</p>
+        </div>
+
+        <div class="section">
+            <h2>二、参赛对象</h2>
+            <ul>
+                <li>面向全社会开放：个人、高等院校、科研单位、企业、创客团队等均可报名</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>三、赛程安排（历届示例）</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-title">航天科工站</div>
+                    <p>初赛：2018.3.15-4.15；决赛：2018.4.20-5.15</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">国家电网站</div>
+                    <p>线上初赛：2018.4-7；集中决赛：2018.8-9（中国电科院）</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">百度公司站</div>
+                    <p>初赛：2018.5.1；复赛：2018.5.20；决赛结果：2018.6.1 公布</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">浙大一附院站</div>
+                    <p>线上征集/筛选：2018.4-6；复赛：2018.7-8；决赛：2018.9</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">中国联通 & 腾讯站</div>
+                    <p>初赛：2018.6；复赛：2018.7；决赛：2018.9</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>四、赛题设置（历届示例）</h2>
+            <div class="track-grid">
+                <div class="track-card">
+                    <h4>航天科工站</h4>
+                    <ul>
+                        <li>智能算法：目标识别、语义关系挖掘、智能制造高级排程</li>
+                        <li>智能应用：面向工业场景的 AI 应用实践</li>
+                    </ul>
+                </div>
+                <div class="track-card">
+                    <h4>国家电网站</h4>
+                    <ul>
+                        <li>语义方向：电力新词发现、同义词发现</li>
+                        <li>图像方向：无人机巡检图像识别、细粒度识别</li>
+                    </ul>
+                </div>
+                <div class="track-card">
+                    <h4>百度公司站</h4>
+                    <ul>
+                        <li>百度智能问答评测任务：阅读理解搜索结果并回答问题</li>
+                    </ul>
+                </div>
+                <div class="track-card">
+                    <h4>浙大一附院站</h4>
+                    <ul>
+                        <li>医疗机器人、智能药物研发、智能影像识别、智能诊疗、智能健康管理、泛医学 AI</li>
+                    </ul>
+                </div>
+                <div class="track-card">
+                    <h4>中国联通 & 腾讯站</h4>
+                    <ul>
+                        <li>应用类：通信网络与数据应用</li>
+                        <li>开放创新类：智慧公屋、智慧城市</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>五、报名方式（历届示例）</h2>
+            <ul>
+                <li>以 2019 中国移动“家・网”赛站为例：通过 PC 端 Chrome 访问 <a href="http://aiia.cmri.cn/" target="_blank" rel="noopener">http://aiia.cmri.cn/</a>，选择赛题报名、填写信息并提交，审核通过后以邮件通知</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>六、奖项设置（历届示例）</h2>
+            <ul>
+                <li>航天科工站：最具潜力奖、科工 AI 成果奖、最受欢迎奖等；奖励含入库、投融资对接等</li>
+                <li>国家电网站：一等奖 1、二等奖 2、三等奖若干</li>
+                <li>百度公司站：一/二/三等奖；奖金与参会交流赞助</li>
+                <li>浙大一附院站：入围决赛团队有机会获得不低于 1000 万风投及各类支持</li>
+                <li>中国联通 & 腾讯站：一/二/三等奖与优胜奖；优秀产品有机会进入合作供应商目录</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>七、注意事项</h2>
+            <div class="highlight-box">
+                <h4>重要提醒</h4>
+                <ul>
+                    <li>各赛点规则、时间与材料要求由主办单位确定，请以当届公告为准</li>
+                    <li>涉及医疗/电力/通信等行业的赛题需特别注意数据合规与安全</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
