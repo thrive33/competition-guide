@@ -1,0 +1,12 @@
+component: website # 静态网站组件
+name: competition-guide-static # 应用名称
+app: competition-guide # 项目名称
+stage: dev
+
+inputs:
+  src:
+    src: ./ # 静态文件目录（你的HTML/CSS/JS都在根目录，所以填./）
+    index: index.html # 首页文件
+    error: index.html # 错误页（可同首页）
+  region: ap-guangzhou # 部署区域（选一个近的，如广州）
+  bucketName: competition-guide-bucket # 存储桶名称（自定义，需唯一）
